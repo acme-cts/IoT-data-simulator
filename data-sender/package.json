@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-javascript-obfuscator": "1.1.4"
+    "gulp-javascript-obfuscator": "^1.1.6"
   }
 }

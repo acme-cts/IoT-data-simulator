@@ -1,4 +1,4 @@
-FROM node:9.2.0-alpine as node_modules_installer
+FROM node:10.4.0-alpine as node_modules_installer
 
 # install native deps build tools
 RUN apk add --no-cache make gcc g++ python bash
@@ -12,7 +12,7 @@ WORKDIR /usr/data-sender
 COPY package.json .
 RUN npm install
 
-FROM node:9.2.0-alpine
+FROM node:10.4.0-alpine
 RUN apk add --no-cache bash
 
 # Create app directory

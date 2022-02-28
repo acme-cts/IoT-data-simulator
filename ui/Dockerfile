@@ -1,5 +1,5 @@
 #Build ui bundle stage
-FROM node:10.4.0-alpine as bundle-builder
+FROM node:10.19.0-alpine as bundle-builder
 
 # Install native deps build tools
 RUN apk add --no-cache make gcc g++ python
@@ -13,7 +13,7 @@ RUN npm install
 RUN npm run build:prod
 
 # Final image build with node env and static bundle
-FROM node:10.4.0-alpine
+FROM node:10.19.0-alpine
 
 RUN apk add --update --no-cache openssl
 
